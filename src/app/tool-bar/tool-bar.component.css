@@ -6,14 +6,17 @@
     height: 60px;
     display: flex;
     align-items: center;
-    background-color: #1976d2;
+	justify-content: space-between;
+    background-color: var(--background-dark);
     color: white;
     font-weight: 600;
 	z-index: 10;
+	width: 100%;
   }
 
   .toolbar img {
     margin: 0 16px;
+	width: 35px;
   }
 
   .toolbar #twitter-logo {
@@ -29,4 +32,12 @@
   .toolbar #twitter-logo:hover,
   .toolbar #youtube-logo:hover {
     opacity: 0.8;
+  }
+
+  .avatar-container{
+	border-radius: 50%;
+  }
+
+  .avatar-container img{
+	border-radius: 50%;
   }
