@@ -1,1 +1,10 @@
-<p>dashboard works!</p>
+<section class="dashboard">
+	<div  class="dashboard-actions" > <span>Tu Dashboard</span>  <span> Personalizar </span>  </div>
+	
+	<div class="widgets-container"  >
+		<div class="widget" *ngFor= "let widget of widgets" >	
+			<span>{{widget.name}}</span>
+		</div> 
+	</div>
+	
+</section>

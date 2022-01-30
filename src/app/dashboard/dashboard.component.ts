@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Widget } from '../common/types';
+import  {WIDGETS} from '../common/data';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+	widgets = WIDGETS;
+	constructor() { }
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+	ngOnInit(): void {
+	
+	}
 
 }

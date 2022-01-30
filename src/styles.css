@@ -17,3 +17,15 @@
 	--success-dark: rgb(128, 237, 132);
 
 }
+
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}

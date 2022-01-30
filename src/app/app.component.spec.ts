@@ -1,6 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { MainMenuComponent } from './main-menu/main-menu.component';
 import { ToolBarComponent } from './tool-bar/tool-bar.component';
 
 describe('AppComponent', () => {
@@ -11,7 +12,8 @@ describe('AppComponent', () => {
       ],
       declarations: [
         AppComponent,
-		ToolBarComponent
+		ToolBarComponent,
+		MainMenuComponent 
       ],
     }).compileComponents();
   });
