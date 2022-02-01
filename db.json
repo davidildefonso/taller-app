@@ -1,0 +1,124 @@
+{
+	"products": [
+		{
+			"id": 1,
+			"name": "Pañales de tela Gasa color blanco",
+			"cost": 15,
+			"price": 20,
+			"margin": 5,
+			"moneda": "PEN",
+			"unidad": "docena",
+			"ranking": "A"
+		},
+		{
+			"id": 2,
+			"name": "Pañales de tela Gasa color estampado",
+			"cost": 21,
+			"price": 25,
+			"margin": 4,
+			"moneda": "PEN",
+			"unidad": "docena",
+			"ranking": "A"
+		},
+		{
+			"id": 3,
+			"name": "Pañales de tela Bombasi color blanco",
+			"cost": 22,
+			"price": 26,
+			"margin": 4,
+			"moneda": "PEN",
+			"unidad": "docena",
+			"ranking": "A"
+		},
+		{
+			"id": 4,
+			"name": "Pañales de tela Bombasi color estampado",
+			"cost": 25,
+			"price": 31,
+			"margin": 6,
+			"moneda": "PEN",
+			"unidad": "docena",
+			"ranking": "A"
+		},
+		{
+			"id": 5,
+			"name": "Puntas para bebé color blanco",
+			"cost": 6,
+			"price": 10,
+			"margin": 4,
+			"moneda": "PEN",
+			"unidad": "docena",
+			"ranking": "A"
+		},
+		{
+			"id": 6,
+			"name": "Puntas para bebé color estampado",
+			"cost": 6,
+			"price": 10,
+			"margin": 4,
+			"moneda": "PEN",
+			"unidad": "docena",
+			"ranking": "C"
+		},
+		{
+			"id": 7,
+			"name": "Pañuelos para Hombre modelo económico",
+			"cost": 4,
+			"price": 6,
+			"margin": 2,
+			"moneda": "PEN",
+			"unidad": "docena",
+			"ranking": "B"
+		},
+		{
+			"id": 8,
+			"name": "Pañuelos para Hombre con caja modelo premium",
+			"cost": 5,
+			"price": 8,
+			"margin": 3,
+			"moneda": "PEN",
+			"unidad": "docena",
+			"ranking": "B"
+		},
+		{
+			"id": 9,
+			"name": "Secadores  talla chica",
+			"cost": 5,
+			"price": 9,
+			"margin": 4,
+			"moneda": "PEN",
+			"unidad": "docena",
+			"ranking": "C"
+		},
+		{
+			"id": 10,
+			"name": "Secadores  talla chica",
+			"cost": 9,
+			"price": 13,
+			"margin": 4,
+			"moneda": "PEN",
+			"unidad": "docena",
+			"ranking": "C"
+		}
+	],
+	"vistas": [
+		{
+			"tablas": {
+				"productos": {
+					"columnas": [
+						"Código",
+						"Nombre",
+						"Costo unitario",
+						"Precio de venta unitario",
+						"Margen",
+						"Moneda",
+						"Unidad de medida",
+						"Calificación"
+					]
+				}
+			},
+			"body": "some comment",
+			"postId": 1
+		}
+	]
+}

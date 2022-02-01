@@ -19,3 +19,10 @@
 	padding: 10px 0;
 	cursor: pointer;
 }
+
+.menu-list li a{
+	text-decoration: none;
+}
+.menu-list li a:visited{
+	color: inherit;
+}
