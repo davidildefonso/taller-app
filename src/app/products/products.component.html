@@ -1,2 +1,7 @@
 <p>products works!</p>
+<ul>
+	<li *ngFor="let product of products">
+		{{product.id || -1}}
+	</li>
+</ul>
 <app-table></app-table>

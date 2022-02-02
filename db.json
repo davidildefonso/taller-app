@@ -101,24 +101,19 @@
 			"ranking": "C"
 		}
 	],
-	"vistas": [
-		{
-			"tablas": {
-				"productos": {
-					"columnas": [
-						"Código",
-						"Nombre",
-						"Costo unitario",
-						"Precio de venta unitario",
-						"Margen",
-						"Moneda",
-						"Unidad de medida",
-						"Calificación"
-					]
-				}
-			},
-			"body": "some comment",
-			"postId": 1
+	"tables": [
+		 {
+			"id": "products",
+			"columns": [
+				"Código",
+				"Nombre",
+				"Costo unitario",
+				"Precio de venta unitario",
+				"Margen",
+				"Moneda",
+				"Unidad de medida",
+				"Calificación"
+			]
 		}
 	]
 }

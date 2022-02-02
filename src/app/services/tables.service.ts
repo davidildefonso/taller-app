@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { Product } from '../common/types';
 import { catchError, retry } from 'rxjs/operators';
@@ -7,10 +7,9 @@ import { catchError, retry } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
+export class TablesService {
 
-export class ProductService {
-
-	private productsUrl = "http://localhost:3001/products";
+	private productsUrl = "http://localhost:3001/tables/products";
 
 	constructor(
 		private http: HttpClient
@@ -36,4 +35,5 @@ export class ProductService {
 
 		return throwError("Something bad happenned; please try again later.")
 	}
+
 }
