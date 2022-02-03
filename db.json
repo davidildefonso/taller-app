@@ -103,7 +103,7 @@
 	],
 	"tables": [
 		 {
-			"id": "products",
+			"id": "productos",
 			"columns": [
 				"Código",
 				"Nombre",

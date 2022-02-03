@@ -14,3 +14,9 @@ export interface Product{
 	unidad: string
 	ranking: string
 }
+
+
+export interface Table{
+	id: string;
+	columns: [string]
+}

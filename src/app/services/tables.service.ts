@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
-import { Product } from '../common/types';
+import { Table } from '../common/types';
 import { catchError, retry } from 'rxjs/operators';
 
 @Injectable({
@@ -9,15 +9,15 @@ import { catchError, retry } from 'rxjs/operators';
 })
 export class TablesService {
 
-	private productsUrl = "http://localhost:3001/tables/products";
+	private tablesUrl = "http://localhost:3001/tables";
 
 	constructor(
 		private http: HttpClient
 	) { }
 
 
-	getProducts(): Observable<Product[]>{
-		return this.http.get<Product[]>(this.productsUrl)
+	getColumns(url: string): Observable<Table>{
+		return this.http.get<Table>(`${this.tablesUrl}/${url}`)
 			.pipe(
 				retry(3),
 				catchError(this.handleError)

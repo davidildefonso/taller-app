@@ -18,4 +18,8 @@ export class AppComponent {
 			}		 
 		});    	
 	}
+
+	getLocation(): string {
+		return this.location;
+	}
 }

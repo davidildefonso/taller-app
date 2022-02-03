@@ -13,7 +13,7 @@ export class ProductsComponent implements OnInit {
 
 	products : Product[]  = [];
 
-	@Input() location: string = "";
+	@Input() location: string | undefined; 
 
 	constructor(private productService : ProductService) { }
 
