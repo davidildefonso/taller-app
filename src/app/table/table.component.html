@@ -2,10 +2,10 @@
 	<table>
 		<tbody>
 			<tr>				
-				<th  *ngFor="let name of columns">{{name }}</th>
+				<th  *ngFor="let column of columns">{{column.real }}</th>
 			</tr>
-			<tr>
-				<td>data</td>
+			<tr *ngFor="let row of data" >
+				<td *ngFor="let column of columns" >{{row[column.key]}}  </td>
 			</tr>
 		</tbody>
 	</table>

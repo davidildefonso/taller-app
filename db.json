@@ -105,14 +105,14 @@
 		 {
 			"id": "productos",
 			"columns": [
-				"Código",
-				"Nombre",
-				"Costo unitario",
-				"Precio de venta unitario",
-				"Margen",
-				"Moneda",
-				"Unidad de medida",
-				"Calificación"
+				{ "real": "Código", "key": "id"},
+				{ "real": "Nombre", "key": "name"},
+				{ "real": "Costo unitario", "key": "cost"},
+				{ "real": "Precio de venta unitario", "key": "price"},
+				{ "real": "Margen", "key": "margin"},
+				{ "real": "Moneda", "key": "moneda"},
+				{ "real": "Unidad de medida", "key": "unidad"},
+				{ "real": "Calificación", "key": "ranking"}
 			]
 		}
 	]

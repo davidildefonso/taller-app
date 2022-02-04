@@ -14,6 +14,7 @@ import { ReportsComponent } from './reports/reports.component';
 import { SalesComponent } from './sales/sales.component';
 import { InventoryComponent } from './inventory/inventory.component';
 import { TableComponent } from './table/table.component';
+import { httpInterceptorProviders } from './http-interceptors';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { TableComponent } from './table/table.component';
     AppRoutingModule,
 	HttpClientModule
   ],
-  providers: [],
+  providers: [httpInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

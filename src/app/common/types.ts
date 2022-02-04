@@ -5,6 +5,7 @@ export interface Widget {
 
 
 export interface Product{
+	[k: string]: string | number
 	id: number
 	name: string
 	cost: number
@@ -18,5 +19,10 @@ export interface Product{
 
 export interface Table{
 	id: string;
-	columns: [string]
+	columns: [TableItem]
+}
+
+export interface TableItem{
+	key: string
+	real: string
 }

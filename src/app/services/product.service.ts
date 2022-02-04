@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { Product } from '../common/types';
-import { catchError, retry } from 'rxjs/operators';
+import { map, catchError, retry } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -18,9 +18,13 @@ export class ProductService {
 
 
 	getProducts(): Observable<Product[]>{
+
 		return this.http.get<Product[]>(this.productsUrl)
 			.pipe(
 				retry(3),
+				map( response => { 				
+					return response; 
+				}),
 				catchError(this.handleError)
 			)
 		;
