@@ -3,13 +3,14 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { Table } from '../common/types';
 import { catchError, retry } from 'rxjs/operators';
+import{ GlobalConstants } from '../common/global-constants';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TablesService {
 
-	private tablesUrl = "http://localhost:3001/tables";
+	private tablesUrl = `${GlobalConstants.BASE_URL}tables`;
 
 	constructor(
 		private http: HttpClient

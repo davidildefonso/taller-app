@@ -3,6 +3,8 @@ import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http
 import { Observable, throwError } from 'rxjs';
 import { Product } from '../common/types';
 import { map, catchError, retry } from 'rxjs/operators';
+import { GlobalConstants } from '../common/global-constants';
+import { HttpErrorHandler, HandleError } from './http-error-handler.service';
 
 @Injectable({
   providedIn: 'root'
@@ -10,34 +12,29 @@ import { map, catchError, retry } from 'rxjs/operators';
 
 export class ProductService {
 
-	private productsUrl = "http://localhost:3001/products";
+	public productsUrl = `${GlobalConstants.BASE_URL}products`;
+
+	private handleError: HandleError;
 
 	constructor(
-		private http: HttpClient
-	) { }
+		private http: HttpClient,
+		httpErrorHandler: HttpErrorHandler
+	) { 
+		this.handleError = httpErrorHandler.createHandleError('ProductService');
+	}
 
 
 	getProducts(): Observable<Product[]>{
 
 		return this.http.get<Product[]>(this.productsUrl)
 			.pipe(
-				retry(3),
+				//retry(3), this makes unit test fail
 				map( response => { 				
 					return response; 
 				}),
-				catchError(this.handleError)
+				catchError(this.handleError('getProducts', []))
 			)
 		;
 	}
 
-
-	private handleError(error: HttpErrorResponse){
-		if(error.status === 0){
-			console.error(`An error ocurred ${error.error} `);
-		}else{
-			console.error(`backend returned code  ${error.status}, body was: ${error.error}`);
-		}
-
-		return throwError("Something bad happenned; please try again later.")
-	}
 }
