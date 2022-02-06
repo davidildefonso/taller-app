@@ -3,6 +3,8 @@ import { RouterTestingModule } from "@angular/router/testing";
 import { TableComponent } from './table.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { HttpClient } from '@angular/common/http';
+import { HttpErrorHandler } from '../services/http-error-handler.service';
+import { MessageService } from '../services/message.service';
 
 describe('TableComponent', () => {
   let component: TableComponent;
@@ -13,6 +15,11 @@ describe('TableComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ TableComponent ],
 	  imports: [RouterTestingModule, HttpClientTestingModule],
+	  providers: [
+			HttpErrorHandler,
+        	MessageService,
+			HttpClient
+		]
     })
     .compileComponents();
 

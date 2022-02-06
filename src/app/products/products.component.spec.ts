@@ -10,7 +10,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 describe('ProductsComponent', () => {
   let component: ProductsComponent;
   let fixture: ComponentFixture<ProductsComponent>;
- // let httpClient: HttpClient;
+
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -24,7 +24,7 @@ describe('ProductsComponent', () => {
     })
     .compileComponents();
 
-	//httpClient = TestBed.inject(HttpClient);
+	
   });
 
   beforeEach(() => {

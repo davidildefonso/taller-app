@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Product, TableItem } from '../common/types';
+import { TablesColumns, TableItem } from '../common/types';
 import  {TablesService}  from '../services/tables.service';
 
 
@@ -15,7 +15,7 @@ export class TableComponent implements OnInit {
 	public location : string = "";
 	public columns : TableItem[]  = [];
 
-	@Input() data: Product[] | undefined; 
+	@Input() data: TablesColumns | any;  // doesnt work without any
 
 	constructor(private activatedRoute: ActivatedRoute, private tableService : TablesService) { }
 
@@ -31,9 +31,14 @@ export class TableComponent implements OnInit {
 	}
 
 	getColumns(url: string): void {
+		console.log(url)
 		this.tableService.getColumns(url)
 			.subscribe(value => { 
-				this.columns = value.columns;
+				console.log(value.columns)
+				if(value?.columns){
+					this.columns = value.columns;
+				}
+			
 			})
 	}
 

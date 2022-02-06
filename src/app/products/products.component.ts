@@ -1,23 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../services/product.service';
 import { Product } from '../common/types';
+import { HttpErrorHandler } from '../services/http-error-handler.service';
+import { MessageService } from '../services/message.service';
 
 
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
-  providers: [ProductService],
+  providers: [ProductService, HttpErrorHandler, MessageService],
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
 
 	products : Product[]  = [];
 	
-	constructor(private productService : ProductService) { }
+	constructor(    private productService : ProductService    ) { }
 
 	ngOnInit(): void {
-		this.getProducts();
-		
+		this.getProducts();		
 	}
 
 	getProducts(): void {
