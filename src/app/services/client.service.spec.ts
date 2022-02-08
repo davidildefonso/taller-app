@@ -21,15 +21,15 @@ describe('ClientService', () => {
 		declarations: [
 			TableComponent 
 		],
-      // Import the HttpClient mocking services
-      imports: [ HttpClientTestingModule, RouterTestingModule ],
-      // Provide the service-under-test and its dependencies
-      providers: [
-        ClientService,
-        HttpErrorHandler,
-        MessageService,
-		HttpClient
-      ]
+		// Import the HttpClient mocking services
+		imports: [ HttpClientTestingModule, RouterTestingModule ],
+		// Provide the service-under-test and its dependencies
+		providers: [
+			ClientService,
+			HttpErrorHandler,
+			MessageService,
+			HttpClient
+		]
     });
 
     // Inject the http, test controller, and service-under-test

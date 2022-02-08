@@ -28,7 +28,8 @@ describe('Admin app', () => {
 	it("Navigates to the sales page", () => {
 		cy.contains("VENTAS").click();
 		cy.location("href").should("contain","ventas");
-		cy.contains('sales works!');
+	
+	
 
 		cy.contains('Acciones');
 		cy.contains('Ayuda');
@@ -38,7 +39,7 @@ describe('Admin app', () => {
 	it("Navigates to the inventory page", () => {
 		cy.contains("INVENTARIO").click();
 		cy.location("href").should("contain","inventario");
-		cy.contains('inventory works!');
+	
 
 		cy.contains('Acciones');
 		cy.contains('Ayuda');
@@ -62,7 +63,7 @@ describe('Admin app', () => {
 	it("Navigates to the providers page", () => {
 		cy.contains("PROVEEDORES").click();
 		cy.location("href").should("contain","proveedores");
-		cy.contains('providers works!');
+		
 
 		cy.contains('Acciones');
 		cy.contains('Ayuda');
@@ -117,6 +118,101 @@ describe('Admin app', () => {
 			cy.get("table").get("tr:nth-child(2)").get("td:nth-child(2)").contains("client 1"); 
 			cy.get("table").get("tr:nth-child(2)").get("td:nth-child(4)").contains("996565"); 
 			cy.get("table").get("tr:nth-child(2)").get("td:nth-child(7)").contains("client1@gmail.com"); 
+		
+		});
+
+	
+	});
+
+	describe("Inventory page", () => {
+		beforeEach(() => {
+			cy.contains("INVENTARIO").click();		
+		});
+
+		it("when page loads it shows the table with the items in the inventory", () => {
+			cy.location("href").should("contain","inventario");
+			const columnHeaders = 	cy.get("table").get("tr:first");
+			columnHeaders.get("th:first").contains("Código"); 
+			columnHeaders.get("th:nth-child(2)").contains("Tipo"); 
+			columnHeaders.get("th:nth-child(3)").contains("Nombre"); 
+			columnHeaders.get("th:nth-child(4)").contains("Cantidad"); 
+			columnHeaders.get("th:nth-child(5)").contains("Unidad"); 
+			
+			cy.get("table").get("tr:nth-child(2)").get("td:first").contains("1"); 
+			cy.get("table").get("tr:nth-child(2)").get("td:nth-child(2)").contains("Materia Prima"); 
+			cy.get("table").get("tr:nth-child(2)").get("td:nth-child(3)").contains("Tela gasa color blanco económica"); 
+			cy.get("table").get("tr:nth-child(2)").get("td:nth-child(4)").contains(500); 
+			cy.get("table").get("tr:nth-child(2)").get("td:nth-child(5)").contains("metros"); 
+		
+		});
+
+	
+	});
+
+
+	describe("Products page", () => {
+		beforeEach(() => {
+			cy.contains("PRODUCTOS").click();		
+		});
+
+		it("when page loads it shows the table with the products information", () => {
+			cy.location("href").should("contain","productos");
+			const columnHeaders = 	cy.get("table").get("tr:first");
+			columnHeaders.get("th:first").contains("Código"); 
+			columnHeaders.get("th:nth-child(2)").contains("Nombre"); 
+			columnHeaders.get("th:nth-child(3)").contains("Costo Unitario"); 
+			columnHeaders.get("th:nth-child(4)").contains("Precio de venta unitario"); 
+			
+			cy.get("table").get("tr:nth-child(2)").get("td:first").contains(1); 
+			cy.get("table").get("tr:nth-child(2)").get("td:nth-child(2)").contains("Pañales de tela Gasa color blanco"); 
+			cy.get("table").get("tr:nth-child(2)").get("td:nth-child(3)").contains(15); 
+			cy.get("table").get("tr:nth-child(2)").get("td:nth-child(4)").contains(20); 
+		
+		});
+
+	
+	});
+
+	describe("Providers page", () => {
+		beforeEach(() => {
+			cy.contains("PROVEEDORES").click();		
+		});
+
+		it("when page loads it shows the table with the providers information", () => {
+			cy.location("href").should("contain","proveedores");
+			const columnHeaders = 	cy.get("table").get("tr:first");
+			columnHeaders.get("th:first").contains("Código"); 
+			columnHeaders.get("th:nth-child(2)").contains("Nombre"); 
+			columnHeaders.get("th:nth-child(4)").contains("Teléfono"); 
+			columnHeaders.get("th:nth-child(7)").contains("Email"); 
+			
+			cy.get("table").get("tr:nth-child(2)").get("td:first").contains("1"); 
+			cy.get("table").get("tr:nth-child(2)").get("td:nth-child(2)").contains("Confecciones Cuzco"); 
+			cy.get("table").get("tr:nth-child(2)").get("td:nth-child(4)").contains("984653232"); 
+			cy.get("table").get("tr:nth-child(2)").get("td:nth-child(7)").contains("confcuzco@gmail.com"); 
+		
+		});
+
+	
+	});
+
+	describe("Sales page", () => {
+		beforeEach(() => {
+			cy.contains("VENTAS").click();		
+		});
+
+		it("when page loads it shows the table with the sales information", () => {
+			cy.location("href").should("contain","ventas");
+			const columnHeaders = 	cy.get("table").get("tr:first");
+			columnHeaders.get("th:first").contains("Código"); 
+			columnHeaders.get("th:nth-child(2)").contains("Fecha"); 
+			columnHeaders.get("th:nth-child(3)").contains("Orden Id"); 
+			columnHeaders.get("th:nth-child(4)").contains("Estado"); 
+			
+			cy.get("table").get("tr:nth-child(2)").get("td:first").contains(1); 
+			cy.get("table").get("tr:nth-child(2)").get("td:nth-child(2)").contains("2022-01-31"); 
+			cy.get("table").get("tr:nth-child(2)").get("td:nth-child(3)").contains(1); 
+			cy.get("table").get("tr:nth-child(2)").get("td:nth-child(4)").contains("completed"); 
 		
 		});
 

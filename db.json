@@ -487,13 +487,195 @@
 				"businessRepresentativeEmail": null
 			}	
 	],
+	"providers": [
+		{
+			"id": 1,
+			"name1": "Confecciones Cuzco",
+			"name2": "timoteo cuzco",
+			"phone": "984653232",
+			"phone2": "017254656",
+			"phone3": "99946469",
+			"email1": "confcuzco@gmail.com",
+			"email2": "tcuzco@outlook.com",
+			"address1": "Av Aviacion  485 ",
+			"neighborhood1": "la victoria",
+			"city1": "lima",
+			"region1": "lima",
+			"country1": "Perú",
+			"address2": "Jiron Hipolito Unanue 154",
+			"neighborhood2": "la victoria",
+			"city2": "lima",
+			"region2": "lima",
+			"country2": "Perú",
+			"business": true,
+			"legalId": 226261161,
+			"legalAddress":  "Av Aviacion  485",
+			"legalAddressNeighborhood": "la victoria",
+			"legalAddressCity": "lima",
+			"legalAddressRegion": "lima",
+			"legalAddressCountry": "Perú",
+			"ranking": "A",
+			"facebook": null,
+			"businessRepresentative": null,
+			"businessRepresentativePhone": null,
+			"businessRepresentativeEmail": null
+		},
+		{
+			"id": 2,
+			"name1": "Manuel Zavaleta",
+			"name2": "",
+			"phone": "9115156",
+			"phone2": "9932311",
+			"phone3": null,
+			"email1": "zavaleta@gmail.com",
+			"email2": null,
+			"address1": "Av Aviacion 565",
+			"neighborhood1": "la victoria",
+			"city1": "lima",
+			"region1": "lima",
+			"country1": "Perú",
+			"address2": "",
+			"neighborhood2": "",
+			"city2": "",
+			"region2": "",
+			"country2": "",
+			"business": false,
+			"legalId": 13212151,
+			"legalAddress":  "Av Aviacion 565",
+			"legalAddressNeighborhood": "la victoria",
+			"legalAddressCity": "lima",
+			"legalAddressRegion": "lima",
+			"legalAddressCountry": "Perú",
+			"ranking": "A",
+			"facebook": "fb.com/zavaleta",
+			"businessRepresentative": "",
+			"businessRepresentativePhone":null,
+			"businessRepresentativeEmail": ""
+		}
+	],
+	"sales": [
+		{
+			"id": 1,
+			"dateCreated":"2022-01-31",
+			"orderId": 1,
+			"status": "completed",
+			"dateModified": "2022-1-31",
+			"type": "delivery",
+			"description": "processed without issues"					
+		},
+		{
+			"id": 2,
+			"dateCreated": "2022-02-08" ,
+			"orderId": 2,
+			"status": "completed",
+			"dateModified": "2022-02-08",
+			"type": "online",
+			"description": "processed without issues"		
+		},					
+		{
+			"id": 3,
+			"dateCreated": "2022-01-11",
+			"orderId": 3,
+			"status": "cancelled",
+			"dateModified": "2022-01-15",
+			"type": "online",
+			"description": "payment was not made within allowable timeframe for order id 3"			
+		},					
+		{
+			"id": 4,
+			"dateCreated": "2022-01-21",
+			"orderId": 4,
+			"status": "completed",
+			"dateModified": "2022-01-21",
+			"type": "delivery",
+			"description": "processed without issues"				
+		},					
+		{
+			"id": 5,
+			"dateCreated": "2022-01-28",
+			"orderId": 5,
+			"status": "partially paid",
+			"dateModified": "2022-01-28",
+			"type": "credit",
+			"description": "pay advanced of 50%"
+
+		}
+	],
+	"inventory": [
+		{
+			"id": 1,
+			"type": "Materia Prima",
+			"name": "Tela gasa color blanco económica",
+			"quantity": 500,
+			"unit": "metros",
+			"isProduct": false,
+			"productId": null,
+			"isMaterial": false,
+			"materialId": null,
+			"isMainResource": true,
+			"mainResourceId": 1					
+		},
+		{
+			"id": 2,
+			"type": "producto terminado",
+			"name": "Tela gasa color blanco económica",
+			"quantity": 55,
+			"unit": "docenas",
+			"isProduct": true,
+			"productId": 1,
+			"isMaterial": false,
+			"materialId": null,	
+			"isMainResource": false,
+			"mainResourceId": null			
+		},					
+		{
+			"id": 3,
+			"type": "producto terminado",
+			"name": "pañal gasa blanca color blanco económico ",
+			"quantity": 12,
+			"unit": "docenas",
+			"isProduct": true,
+			"productId": 2,
+			"isMaterial": false,
+			"materialId": null,
+			"isMainResource": false,
+			"mainResourceId": null				
+		},					
+		{
+			"id": 4,
+			"type": "Materia Prima",
+			"name": "Tela popelina color blanco económica",
+			"quantity": 350,
+			"unit": "metros",
+			"isProduct": false,
+			"productId": null,
+			"isMaterial": false,
+			"materialId": null,
+			"isMainResource": false,
+			"mainResourceId": null				
+		},					
+		{
+			"id": 5,
+			"type": "materiales indirectos",
+			"name": "bolsas para pañales de gasa",
+			"quantity": 100,
+			"unit": "unidad",
+			"isProduct": false,
+			"productId": null,
+			"isMaterial": true,
+			"materialId": 1,
+			"isMainResource": false,
+			"mainResourceId": null
+
+		}
+	],
 	"tables": [
 		{
 			"id": "productos",
 			"columns": [
 				{ "real": "Código", "key": "id"},
 				{ "real": "Nombre", "key": "name"},
-				{ "real": "Costo unitario", "key": "cost"},
+				{ "real": "Costo Unitario", "key": "cost"},
 				{ "real": "Precio de venta unitario", "key": "price"},
 				{ "real": "Margen", "key": "margin"},
 				{ "real": "Moneda", "key": "moneda"},
@@ -534,6 +716,69 @@
 				{ "real": "Representante Legal", "key": "businessRepresentative"},
 				{ "real": "Representante teléfono", "key": "businessRepresentativePhone"},
 				{ "real": "Representante email", "key": "businessRepresentativeEmail"}			
+			]
+		},
+		{
+			"id": "proveedores",
+			"columns": [
+				{ "real": "Código", "key": "id"},
+				{ "real": "Nombre", "key": "name1"},
+				{ "real": "Nombre 2", "key": "name2"},
+				{ "real": "Teléfono", "key": "phone"},
+				{ "real": "Teléfono 2", "key": "phone2"},
+				{ "real": "Teléfono 3", "key": "phone3"},
+				{ "real": "Email", "key": "email1"},
+				{ "real": "Email 2", "key": "email2"},
+				{ "real": "Dirección", "key": "address1"},
+				{ "real": "Distrito", "key": "neighborhood1"},
+				{ "real": "Ciudad", "key": "region1"},
+				{ "real": "Departamento", "key": "city1"},
+				{ "real": "País", "key": "country1"},
+				{ "real": "Dirección 2", "key": "address2"},
+				{ "real": "Distrito 2", "key": "neighborhood2"},
+				{ "real": "Ciudad 2", "key": "city2"},
+				{ "real": "Departamento 2", "key": "region2"},
+				{ "real": "País 2", "key": "country2"},
+				{ "real": "Es empresa", "key": "business"},
+				{ "real": "RUC", "key": "legalId"},
+				{ "real": "Dirección envío", "key": "legalAddress"},
+				{ "real": "Distrito envío", "key": "neighborhood2"},
+				{ "real": "Ciudad envío", "key": "city2"},
+				{ "real": "Departamento envío", "key": "region2"},
+				{ "real": "País envío", "key": "country2"},
+				{ "real": "Ranking", "key": "ranking"},
+				{ "real": "Facebook", "key": "facebook"},
+				{ "real": "Representante Legal", "key": "businessRepresentative"},
+				{ "real": "Representante teléfono", "key": "businessRepresentativePhone"},
+				{ "real": "Representante email", "key": "businessRepresentativeEmail"}
+			]
+		},
+		{
+			"id": "ventas",
+			"columns": [
+				{ "real": "Código", "key": "id"},
+				{ "real": "Fecha de creación", "key": "dateCreated"},
+				{ "real": "Orden Id", "key": "orderId"},
+				{ "real": "Estado", "key": "status"},
+				{ "real": "Fecha últime de modificación", "key": "dateModified"},
+				{ "real": "Tipo", "key": "type"},
+				{ "real": "Descripción", "key": "description"}
+			]
+		},
+		{
+			"id": "inventario",
+			"columns": [
+				{ "real": "Código", "key": "id"},
+				{ "real": "Tipo", "key": "type"},
+				{ "real": "Nombre", "key": "name"},
+				{ "real": "Cantidad en stock", "key": "quantity"},
+				{ "real": "Unidad", "key": "unit"},
+				{ "real": "Es producto terminado", "key": "isProduct"},
+				{ "real": "Producto Id", "key": "productId"},
+				{ "real": "Es insumo", "key": "isMaterial"},
+				{ "real": "Insumo Id", "key": "materialId"},
+				{ "real": "Es materia prima", "key": "isMainResource"},
+				{ "real": "Materia Prima Id", "key": "mainResourceId"}
 			]
 		}
 	]
